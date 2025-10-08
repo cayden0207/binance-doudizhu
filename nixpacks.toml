@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["python39", "mysql80"]
+nixPkgs = ["python39", "python39Packages.pip", "mysql80"]
 
 [phases.install]
-cmds = ["python3 -m pip install --upgrade pip", "python3 -m pip install -r requirements.txt"]
+cmds = ["pip install -r requirements.txt"]
 
 [phases.build]
 cmds = ["python3 --version"]
