@@ -10,7 +10,7 @@ DEBUG = os.getenv('TORNADO_DEBUG') == 'True'
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'fiDSpuZ7QFe8fm0XP9Jb7ZIPNsOegkHYtgKSd4I83Hs=')
 
-PORT = os.getenv('PORT', 8080)
+PORT = int(os.getenv('PORT', 8080))
 
 WECHAT_CONFIG = {
     'appid': os.getenv('APPID'),
