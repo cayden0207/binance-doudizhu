@@ -109,6 +109,12 @@ export class MainMenu {
         let bg = this.game.add.sprite(this.game.width / 2, 0, 'bg');
         bg.anchor.set(0.5, 0);
 
+        // 添加游戏标题
+        let titleStyle = {font: "bold 72px Arial", fill: "#FFD700", align: "center", stroke: "#8B4513", strokeThickness: 6};
+        let title = this.game.add.text(this.game.world.width / 2, this.game.world.height / 5, "币安斗地主", titleStyle);
+        title.anchor.set(0.5);
+        title.setShadow(3, 3, 'rgba(0,0,0,0.5)', 5);
+
         // 只保留开始游戏按钮，居中显示
         let startGame = this.game.add.button(this.game.world.width / 2, this.game.world.height / 2, 'btn', this.gotoAiRoom, this, 'quick.png', 'quick.png', 'quick.png');
         startGame.anchor.set(0.5);
